@@ -32,11 +32,3 @@ docker build -t helloworld:v1 .
 ```bash
 docker run -it --rm --name HelloWorld helloworld:v1
 ```
-
-### Clean up
-
-```bash
-docker rm $(docker ps -a -q)
-docker rmi helloworld:v1
-docker rmi $(docker images -f "dangling=true" -q)
-```
